@@ -5,17 +5,17 @@ const Sidebar = () => {
   return (
     <Box className="flex flex-col [grid-area:sidebar] h-screen items-center justify-between w-full bg-header-background">
       <Image
-        borderRadius="full"
-        boxSize="150px"
+        boxSize="5rem"
         src="https://bit.ly/dan-abramov"
         alt="Dan Abramov"
+        className="object-contain rounded-full"
       />
       <SideBarItem />
       <Image
-        borderRadius="full"
-        boxSize="150px"
+        boxSize="5rem"
         src="https://bit.ly/dan-abramov"
         alt="Dan Abramov"
+        className="object-contain rounded-full"
       />
     </Box>
   );

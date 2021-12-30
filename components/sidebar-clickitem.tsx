@@ -33,13 +33,13 @@ function SideBarClickItem({ route, name, icon }: SideBarClickItemProps) {
   //
   return (
     <Button
-      className="flex text-3xl items-center "
+      className="flex text-3xl items-center"
       onClick={() => router.push(encodeURI(route))}
       colorScheme={"blue"}
       variant={variants}
       rounded={"none"}
     >
-      <div className="lg:hidden">{icon}</div>
+      <div className="lg:hidden ">{icon}</div>
       <h6 className="hidden lg:block font-semibold">{name}</h6>
     </Button>
   );

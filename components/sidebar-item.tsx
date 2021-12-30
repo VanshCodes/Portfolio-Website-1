@@ -4,10 +4,10 @@ import { SideBarClickItemProps } from "../types/layout";
 import SideBarClickItem from "./sidebar-clickitem";
 const SideBarItemsList: SideBarClickItemProps[] = [
   { name: "Home", route: "/", icon: <MdHome /> },
-  { name: "About", route: "/about" },
-  { name: "Resume", route: "/resume" },
-  { name: "Portfolios", route: "/portfolio" },
-  { name: "Contact", route: "/contact" },
+  { name: "About", route: "/about", icon: <MdHome /> },
+  { name: "Resume", route: "/resume", icon: <MdHome /> },
+  { name: "Portfolios", route: "/portfolio", icon: <MdHome /> },
+  { name: "Contact", route: "/contact", icon: <MdHome /> },
 ];
 const SideBarItemList = () => {
   return (
