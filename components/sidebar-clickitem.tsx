@@ -6,16 +6,18 @@ import { SideBarClickItemProps } from "../types/layout";
 
 function SideBarClickItem({ route, name, icon }: SideBarClickItemProps) {
   const router = useRouter();
-  const [variants, setVariants] = useState("");
+  const [variants, setVariants] = useState("ghost");
+
   const compFunc = () => {
     if (router.isReady) {
-      router.events.on("routeChangeComplete", (u) => {
+      router.events.on("routeChangeComplete", (u, s) => {
         const chosenVariant = u === route ? "solid" : "ghost";
-
-        if (u === route || variants !== chosenVariant) {
-          if (!(variants == chosenVariant)) {
-            setVariants(chosenVariant);
-          }
+        if (
+          u === route ||
+          variants !== chosenVariant ||
+          router.pathname == route
+        ) {
+          setVariants(chosenVariant);
         }
         // let chosenVariant = u == route ? "solid" : "ghost";
         // if (!(variants == chosenVariant)) {
@@ -26,10 +28,11 @@ function SideBarClickItem({ route, name, icon }: SideBarClickItemProps) {
   };
   useEffect(() => {
     let chosenVariant = router.pathname === route ? "solid" : "ghost";
+
     setVariants(chosenVariant);
   }, []); // setVariants(router.pathname == route ? "solid" : "ghost");
 
-  useEffect(compFunc, [router.pathname]); // setVariants(router.pathname == route ? "solid" : "ghost");
+  useEffect(compFunc, [variants]); // setVariants(router.pathname == route ? "solid" : "ghost");
   //
   return (
     <Button

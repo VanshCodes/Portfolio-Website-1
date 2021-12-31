@@ -11,12 +11,7 @@ const Sidebar = () => {
         className="object-contain rounded-full"
       />
       <SideBarItem />
-      <Image
-        boxSize="5rem"
-        src="https://bit.ly/dan-abramov"
-        alt="Dan Abramov"
-        className="object-contain rounded-full"
-      />
+     
     </Box>
   );
 };

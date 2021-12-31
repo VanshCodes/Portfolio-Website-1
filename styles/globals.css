@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
-  .main-grid {
+  .main-grid-mobile {
+    grid-template-columns: 0.2fr 1fr;
+
+    grid-template-areas:
+      "restofstuff"
+      "sidebar";
+  }
+  .main-grid-laptop {
     grid-template-columns: 0.2fr 1fr;
 
     grid-template-areas: "sidebar restofstuff";
+  }
+  .main-grid {
+    @apply main-grid-laptop;
   }
   .btn-menu {
     /* "to left" / "to right" - affects initial color */
