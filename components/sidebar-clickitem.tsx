@@ -36,14 +36,16 @@ function SideBarClickItem({ route, name, icon }: SideBarClickItemProps) {
   //
   return (
     <Button
-      className="flex text-3xl items-center"
+      className={`flex-col btn-hover md:flex-row md:space-x-1.5 text-3xl items-center sm:!w-full ${
+        variants == "solid" ? "selected-item" : " diagonal-right"
+      }`}
       onClick={() => router.push(encodeURI(route))}
-      colorScheme={"blue"}
+      colorScheme={"teal"}
       variant={variants}
       rounded={"none"}
     >
-      <div className="lg:hidden ">{icon}</div>
-      <h6 className="hidden lg:block font-semibold">{name}</h6>
+      <div className="sm:hidden md:block text-2xl">{icon}</div>
+      <h6 className="hidden sm:block font-semibold">{name}</h6>
     </Button>
   );
 }

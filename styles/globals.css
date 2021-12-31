@@ -2,20 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
-  .main-grid-mobile {
-    grid-template-columns: 0.2fr 1fr;
+  .img-path {
+    clip-path: polygon(
+      20% 0%,
+      80% 0%,
+      100% 20%,
+      100% 80%,
+      80% 100%,
+      20% 100%,
+      0% 80%,
+      0% 20%
+    ) !important;
+  }
+  .diagonal-right {
+    transition: 0.8s !important;
+    display: inline-block;
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(3, 255, 127, 0.2) 49.5%,
+      black 50%
+    ) !important;
+    background-size: 200% 200% !important;
+    background-position: bottom right !important;
+  }
 
+  .diagonal-right :hover {
+    background-position: top left !important;
+  }
+
+  .main-grid-mobile {
     grid-template-areas:
       "restofstuff"
       "sidebar";
+    grid-template-rows: auto 0.09fr;
   }
   .main-grid-laptop {
-    grid-template-columns: 0.2fr 1fr;
+    grid-template-columns: 0.2fr auto;
 
     grid-template-areas: "sidebar restofstuff";
   }
   .main-grid {
-    @apply main-grid-laptop;
+    @apply main-grid-mobile sm:main-grid-laptop;
   }
   .btn-menu {
     /* "to left" / "to right" - affects initial color */

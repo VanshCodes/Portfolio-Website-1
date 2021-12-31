@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ChakraProvider>
-      <Box bg={bg} className="grid main-grid">
+      <Box bg={bg} className="grid main-grid h-screen">
         <SideBar />
 
         <Component {...pageProps} />
