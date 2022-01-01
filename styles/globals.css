@@ -37,12 +37,15 @@
     grid-template-rows: auto 0.09fr;
   }
   .main-grid-laptop {
-    grid-template-columns: 0.2fr auto;
-
+    grid-template-columns: 0.1fr auto;
+  }
+  .main-grid-tablet {
     grid-template-areas: "sidebar restofstuff";
+
+    grid-template-columns: 0.2fr auto;
   }
   .main-grid {
-    @apply main-grid-mobile sm:main-grid-laptop;
+    @apply main-grid-mobile sm:main-grid-tablet lg:main-grid-laptop;
   }
   .btn-menu {
     /* "to left" / "to right" - affects initial color */
