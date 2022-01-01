@@ -22,8 +22,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <Box bg={bg} className="grid main-grid h-screen">
         <SideBar />
-
-        <Component {...pageProps} />
+        <Box className="[grid-area:restofstuff] w-full grid place-items-center ">
+          <Component {...pageProps} />
+        </Box>
       </Box>
     </ChakraProvider>
   );
