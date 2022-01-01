@@ -11,7 +11,7 @@ import SideBar from "../components/sidebar";
 function MyApp({ Component, pageProps }: AppProps) {
   const bg = useColorModeValue("rgb(17,18,26)", "whiteAlpha");
   const config = {
-    initialColorMode: "light",
+    initialColorMode: "dark",
     useSystemColorMode: false,
   };
 
