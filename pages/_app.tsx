@@ -3,16 +3,23 @@ import type { AppProps } from "next/app";
 import {
   Box,
   ChakraProvider,
-  useColorMode,
+  extendTheme,
   useColorModeValue,
 } from "@chakra-ui/react";
 import SideBar from "../components/sidebar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const bg = useColorModeValue("rgb(17,18,26)", "whiteAlpha");
+  const config = {
+    initialColorMode: "light",
+    useSystemColorMode: false,
+  };
+
+  // 3. extend the theme
+  const theme = extendTheme({ config });
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Box bg={bg} className="grid main-grid h-screen">
         <SideBar />
 
