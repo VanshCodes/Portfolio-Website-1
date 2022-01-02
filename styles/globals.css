@@ -5,7 +5,7 @@
 @tailwind utilities;
 @layer components {
   .page-heading {
-    @apply text-4xl md:text-5xl font-bold capitalize;
+    @apply text-4xl md:text-5xl font-bold;
   }
 
   .img-path {
