@@ -83,13 +83,13 @@ const AboutItem = ({ left, right }: typesItem.AboutItemProps) => {
   );
 };
 const HeadingItem = ({ text }: typesItem.HeadingItemProps) => {
-  return <h1 className="page-heading p-5 uppercase">{text}</h1>;
+  return <h1 className="page-heading my-20 text-center uppercase">{text}</h1>;
 };
 
 const AboutPage = ({}) => {
   return (
     <div className="flex flex-col space-y-6 ">
-      <HeadingItem text="About us" />
+      <HeadingItem text="About" />
       <div className="flex flex-col md:flex-row items-center lg:items-start  lg:space-y-6 space-x-2">
         <Image
           className="object-contain w-5/12"
