@@ -109,7 +109,7 @@ const AboutPage = ({}) => {
         </div>
       </div>
       <HeadingItem text="Services" />
-      <div className="flex flex-col p-3">
+      <div className="flex flex-col lg:flex-row p-3">
         {ServicesItemLists.map((item, i) => {
           return <ServicesItem {...item} key={i} />;
         })}
