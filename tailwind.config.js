@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         header: {
           background: "#181C2B"
+        },
+        review: {
+          background: "#191C2A"
         }
       }
     },

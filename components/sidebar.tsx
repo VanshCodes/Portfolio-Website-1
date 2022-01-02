@@ -5,7 +5,7 @@ import SideBarItem from "./sidebar-item";
 
 const Sidebar = () => {
   return (
-    <Box className="flex fixed bottom-0 sm:flex-col [grid-area:sidebar] sm:h-screen items-center sm:justify-between w-full bg-header-background">
+    <Box className="flex fixed sm:static  sm:flex-col [grid-area:sidebar] sm:h-screen items-center sm:justify-between w-full bg-header-background">
       <Image
         src="https://tf-react-chester.vercel.app/images/brand-image.jpg"
         alt="Dan Abramov"

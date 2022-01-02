@@ -20,9 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ChakraProvider theme={theme}>
-      <Box bg={bg} className="grid main-grid h-screen">
+      <Box bg={bg} className="grid main-grid h-screen ">
         <SideBar />
-        <Box className="[grid-area:restofstuff] w-full grid place-items-center ">
+        <Box className="[grid-area:restofstuff] w-full grid place-items-center overflow-y-scroll">
           <Component {...pageProps} />
         </Box>
       </Box>

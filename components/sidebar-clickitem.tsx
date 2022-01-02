@@ -2,7 +2,7 @@ import { Button } from "@chakra-ui/react";
 import { url } from "inspector";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { SideBarClickItemProps } from "../types/layout";
+import { SideBarClickItemProps } from "../types/layout.types";
 
 function SideBarClickItem({ route, name, icon }: SideBarClickItemProps) {
   const router = useRouter();

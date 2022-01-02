@@ -6,7 +6,7 @@ import {
   MdPhone,
   MdSupervisedUserCircle,
 } from "react-icons/md";
-import { SideBarClickItemProps } from "../types/layout";
+import { SideBarClickItemProps } from "../types/layout.types";
 import SideBarClickItem from "./sidebar-clickitem";
 const SideBarItemsList: SideBarClickItemProps[] = [
   { name: "Home", route: "/", icon: <MdHome /> },
