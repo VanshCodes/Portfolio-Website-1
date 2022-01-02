@@ -53,7 +53,7 @@ const ReviewsItemLists: typesItem.ReviewsItemProps[] = [
 ];
 const ReviewItem = ({ review, name, type }: typesItem.ReviewsItemProps) => {
   return (
-    <div className="grid [grid-template-rows:repeat(3,0.4fr)] p-5 w-2/3 items-center bg-review-background border-teal-500 break-all border-l-8 place-items-end">
+    <div className="grid [grid-template-rows:repeat(3,0.4fr)] p-5 items-center bg-review-background border-teal-500 break-all border-l-8 place-items-end w-full">
       <div className="p-3 !w-full text-base">{review}</div>
       <div className="text-left text-lg text-teal-400">{name}</div>
       <div className="text-left text-base text-gray-400">{type}</div>
